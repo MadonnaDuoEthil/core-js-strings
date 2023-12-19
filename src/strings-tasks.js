@@ -145,7 +145,7 @@ function removeTrailingWhitespaces(value) {
 function repeatString(str, times) {
   if (str !== '' && times > 0) {
     let result = '';
-    for (let i = 0; i < times; i + 1) {
+    for (let i = 0; i < times; i += 1) {
       result += str;
     }
     return result;
@@ -202,7 +202,7 @@ function removeLastOccurrences(str, value) {
 function sumOfCodes(str) {
   let result = 0;
   if (str !== undefined) {
-    for (let i = 0; i < str.length; i + 1) {
+    for (let i = 0; i < str.length; i += 1) {
       result += str[i].charCodeAt();
     }
     return result;
@@ -341,8 +341,8 @@ function countVowels(str) {
   const vowels = ['a', 'e', 'i', 'o', 'u', 'y', 'A', 'E', 'I', 'O', 'U', 'Y'];
   const strArr = str.split('');
   const newMassive = [];
-  for (let i = 0; i < strArr.length; i + 1) {
-    for (let g = 0; g < vowels.length; g + 1) {
+  for (let i = 0; i < strArr.length; i += 1) {
+    for (let g = 0; g < vowels.length; g += 1) {
       if (strArr[i] === vowels[g]) {
         newMassive.push(strArr[i]);
       }
@@ -368,7 +368,7 @@ function isPalindrome(str) {
   const tranStr = str.toLowerCase();
   const arrStr = tranStr.split('');
   const newArr = [];
-  for (let i = 0; i < arrStr.length; i + 1) {
+  for (let i = 0; i < arrStr.length; i += 1) {
     if (arrStr[i] === ' ') {
       delete arrStr[i];
     } else {
@@ -399,7 +399,7 @@ function findLongestWord(sentence) {
   const traSent = sentence.replace(/[^A-Za-z\s]/gi, '');
   const arrSent = traSent.split(' ');
   let longestWord = '';
-  for (let i = 0; i < arrSent.length; i + 1) {
+  for (let i = 0; i < arrSent.length; i += 1) {
     if (arrSent[i].length > longestWord.length) {
       longestWord = arrSent[i];
     }
@@ -420,7 +420,7 @@ function findLongestWord(sentence) {
 function reverseWords(str) {
   const wordsArr = str.split(' ');
   const reversedWords = [];
-  for (let i = 0; i < wordsArr.length; i + 1) {
+  for (let i = 0; i < wordsArr.length; i += 1) {
     const wordReversed = wordsArr[i].split('').reverse().join('');
     reversedWords.push(wordReversed);
   }
@@ -441,7 +441,7 @@ function reverseWords(str) {
 function invertCase(str) {
   const charArr = str.split('');
   const newArr = [];
-  for (let i = 0; i < charArr.length; i + 1) {
+  for (let i = 0; i < charArr.length; i += 1) {
     if (charArr[i] === charArr[i].toUpperCase()) {
       newArr.push(charArr[i].toLowerCase());
     } else {
