@@ -201,7 +201,7 @@ function removeLastOccurrences(str, value) {
  */
 function sumOfCodes(str) {
   let result = 0;
-  if (str !== undefined) {
+  if (typeof str === 'string') {
     for (let i = 0; i < str.length; i += 1) {
       result += str[i].charCodeAt();
     }
